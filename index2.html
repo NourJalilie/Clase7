@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Ejemplo</title>
+        <style>
+          @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+          *{
+            margin:2; 
+            padding:2;
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+          }
+          body{
+            color: #080357;
+            background: #D6FFB7;
+          }
+          h1{
+            font-weight: 800;
+            text-align: center;
+          }
+          p{
+            font-weight: 400;
+            text-align: center;
+          }
+          div#noot{
+            width:1300px;
+            margin: 0 auto;
+            text-align: center;
+          }
+          div#noot div{
+            border: 2px solid #FFC15E;
+            border-radius: 2rem;
+            width: calc(45% - 2px);
+            padding:1%;
+            margin:1%;
+            float: left;
+            background: #F5FF90;
+            box-shadow: 5px 5px 8px #BFE3A4;
+          }
+          div#noot div.industrial{
+            border: 2px solid #FF9F1C;
+            width: calc(45% - 2px);
+            padding: 1%;
+            margin: 1%;
+            background:#FFC15E;
+          }
+          div#noot div.juego{
+            border: 2px solid #FF9F1C;
+            width: calc(94% - 2px);
+            padding: 1%;
+            margin: 1%;
+            background:#FF9F1C;
+          }
+          div#noot div.fin{
+            width: 95%;
+            clear:both;
+            color: #D6FFB7;
+            background:#080357;
+            border: 0;
+            text-align: center;
+            margin: 1% auto;
+            float: none;
+            font-weight: 800;
+          }
+          div#noot div.subtitle{
+            width: 95%;
+            clear:both;
+            color: #D6FFB7;
+            background:#080357;
+            border: 0;
+            text-align: center;
+            float: none;
+            padding: 0;
+          }
+          div#noot div img {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    height: 100%; /* Altura fija */
+    object-fit: cover;
+    border-radius: 1rem; /* Para que coincida con el border-radius del contenedor */
+}
+        </style>
+
+    </head>
+    <body> 
+        <h1>-----Portafolio-----</h1>
+        <p>Mi portafolio de Behance lo pueden ver <a href="https://www.behance.net/gallery/230948543/Portafolio" target="_blank">aquí</a>.</p>
+        <div id="noot"></div> <!--aca se pone table cuando querramos estilo tabla-->
+
+        <script>
+            /*const tenis = [
+                { name: "Margaret Court", titles: 24 },
+                { name: "Serena Williams", titles: 23 },
+                { name: "Steffi Graf", titles: 22 },
+                { name: "Chris Evert", titles: 19 },
+                { name: "Martina Navratilova", titles: 18 },
+            ];*/
+
+            const trabajos = [
+    { 
+      type: "subtitle",
+      title: "Proyectos Experimentales"
+    },
+                { /*esto se hace por cada trabajo*/
+                  title: "Boltris",
+                  category: "experimental",
+                  photo: "boltris.PNG", /*picsum para imagenes*/
+                  description: "Tote Bag producida a partir de 15 bolsas plásticas por termofusión.",
+                },
+                { /*esto se hace por cada trabajo*/
+                  title: "Bioplástico",
+                  category: "experimental",
+                  photo: "bioplastico.JPEG", /*picsum para imagenes*/
+                  description: "Experimentación con bioplástico en base a almidón de papa, para rediseñar el envoltorio de Frugelé.",
+                },
+      { 
+      type: "subtitle",
+      title: "Proyectos Industriales"
+    },
+                { /*esto se hace por cada trabajo*/
+                  title: "Lámpara Encuentro",
+                  category: "industrial",
+                  photo: "lampara.PNG", /*picsum para imagenes*/
+                  description: "Lámpara hecha con madera de roble, a partir del curvado de madera con vapor.",
+                },
+                { /*esto se hace por cada trabajo*/
+                  title: "Kachow",
+                  category: "industrial",
+                  photo: "kachow.PNG", /*picsum para imagenes*/
+                  description: "Auto funcional diseñado mediante manufactura digital, desarrollado en Fusion360 y corte láser.",
+                },
+      { 
+      type: "subtitle",
+      title: "Proyecto de Diseño de Juegos"
+    },
+                { /*esto se hace por cada trabajo*/
+                  title: "Olerium",
+                  category: "juego",
+                  photo: "olerium.PNG", /*picsum para imagenes*/
+                  description: "Juego para estimular y trabajar la memoria a través de olores, para personas mayores.",
+                },
+      { 
+      type: "subtitle",
+      title: "Pedidos personalizados"
+    },
+                { 
+                  title: "Cartas personalizadas",
+                  category: "pedidos",
+                  photo: "cartas.PNG", /*picsum para imagenes*/
+                  description: "Cartas de juego personalizadas de D&D, hechizos + ficha de personaje.",
+                },
+                { 
+                  title: "Bolsas comerciales",
+                  category: "pedidos",
+                  photo: "bolsas.PNG", /*picsum para imagenes*/
+                  description: "Diseño personalizado de bolsas comerciales en papel kraft para La Oriental.",
+                },
+                
+            ];
+
+
+            /*const valores = [20, 22, 24, 26, 28]; son la cantidad de emojis por linea*/
+            
+
+            // const parrafos = document.querySelector("#noot");
+            // trabajos.forEach((v) => {
+
+
+            //     parrafos.innerHTML += `
+
+            //       <div class="${v.category}">
+            //         <h1>${v.title}</h1>
+            //         <img src="${v.photo}" />
+            //         <p>${v.description}</p>
+            //     </div>`;
+            // });
+
+            const parrafos = document.querySelector("#noot");
+            trabajos.forEach((v) => {
+    if (v.type === "subtitle") {
+        // Renderizar subtítulo
+        parrafos.innerHTML += `
+            <div class="subtitle">
+                <h2>${v.title}</h2>
+            </div>`;
+    } else {
+        // Renderizar trabajo normal
+        parrafos.innerHTML += `
+            <div class="${v.category}">
+                <h1>${v.title}</h1>
+                <img src="${v.photo}" />
+                <p>${v.description}</p>
+            </div>`;
+    }
+});
+
+            parrafos.innerHTML += `<div class="fin">Fin!!</div>`
+            
+            //una forma de hacerlo
+                      //parrafos.innerHTML += "<tr><td>" + v.name + "</td><td>" + emojis(v.titles) + "</td></tr>";//
+
+
+                      // otra forma de hacerlo
+            /*
+
+                parrafos.innerHTML += `
+                  <tr>
+                    <td>${v.name}</td>
+                      <td><div style="width:${v.titles*10}px;background:blue">.</div>
+                    </td>
+                  </tr>`;
+                });
+                  
+            /*
+
+            /*function emojis(n) {
+                var imprime = "";
+                for (var x = 0; x < n; x++) {
+                    imprime += "🏆 ";
+                }
+                return imprime;
+            }*/
+
+        </script>
+    </body>
+</html>
